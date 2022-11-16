@@ -33,3 +33,10 @@ def firstIndexOf(lst: list, nb: int) -> int:
     if i == len(lst):
         i = -1
     return i
+
+def lastIndexOf(lst: list, nb: int) -> int:
+    id = -1
+    for i in range(len(lst)):
+        if lst[i] == nb:
+            id = i
+    return id
