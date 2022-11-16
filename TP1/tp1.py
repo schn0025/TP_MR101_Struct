@@ -58,3 +58,16 @@ def nthIndexOf(lst: list, n: int, elmt: int) -> int:
     return id
 
 
+def creerListeSansDoublon(lst: list) -> list:
+    lstTemp=lst
+    lstRep = []
+    while lstTemp:
+        nb = lstTemp.pop(0)
+        if compter(lstTemp, nb) == 0:
+            lstRep.append(nb)
+        else:
+            while compter(lstTemp, nb) > 0:
+                lstTemp.pop(lastIndexOf(lstTemp, nb))
+            lstRep.append(nb)
+
+    return lst
