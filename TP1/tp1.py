@@ -24,3 +24,12 @@ def contient(lst: list, nb: int) -> bool:
             rep = True
         i += 1
     return rep
+
+
+def firstIndexOf(lst: list, nb: int) -> int:
+    i = 0
+    while i < len(lst) and lst[i] != nb:
+        i += 1
+    if i == len(lst):
+        i = -1
+    return i
