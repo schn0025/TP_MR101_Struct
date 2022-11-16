@@ -71,3 +71,11 @@ def creerListeSansDoublon(lst: list) -> list:
             lstRep.append(nb)
 
     return lst
+
+def supprimerDoublons(lst: list) -> None:
+    i = 0
+    while i < len(lst):
+        while firstIndexOf(lst, lst[i]) != lastIndexOf(lst, lst[i]):
+            del lst[lastIndexOf(lst, lst[i])]
+        i += 1
+    return None
