@@ -34,9 +34,27 @@ def firstIndexOf(lst: list, nb: int) -> int:
         i = -1
     return i
 
+
 def lastIndexOf(lst: list, nb: int) -> int:
     id = -1
     for i in range(len(lst)):
         if lst[i] == nb:
             id = i
     return id
+
+
+def nthIndexOf(lst: list, n: int, elmt: int) -> int:
+    i = 0
+    nb = 0
+    id = -1
+    while i < len(lst) and nb < n:
+        if lst[i] == elmt:
+            nb += 1
+            if nb == n:
+                id = i
+        i += 1
+    if n < nb:
+        id = -1
+    return id
+
+
