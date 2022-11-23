@@ -17,6 +17,7 @@ def compter(lst: list, elmt: int) -> int:
 
 
 def contient(lst: list, nb: int) -> bool:
+    #verifi ci nb est dans la liste
     rep = False
     i = 0
     while not rep and i < len(lst):
@@ -27,6 +28,7 @@ def contient(lst: list, nb: int) -> bool:
 
 
 def firstIndexOf(lst: list, nb: int) -> int:
+    #trouve le 1er index de la valeur nb
     i = 0
     while i < len(lst) and lst[i] != nb:
         i += 1
@@ -59,7 +61,9 @@ def nthIndexOf(lst: list, n: int, elmt: int) -> int:
 
 
 def creerListeSansDoublon(lst: list) -> list:
-    lstTemp=lst
+    lstTemp = []
+    for elt in lst:
+        lstTemp.append(elt)
     lstRep = []
     while lstTemp:
         nb = lstTemp.pop(0)
@@ -70,7 +74,7 @@ def creerListeSansDoublon(lst: list) -> list:
                 lstTemp.pop(lastIndexOf(lstTemp, nb))
             lstRep.append(nb)
 
-    return lst
+    return lstRep
 
 def supprimerDoublons(lst: list) -> None:
     i = 0
@@ -79,3 +83,17 @@ def supprimerDoublons(lst: list) -> None:
             del lst[lastIndexOf(lst, lst[i])]
         i += 1
     return None
+
+def enumerer(lst: list) -> None:
+    lstCopy = lst.copy()
+    while lstCopy:
+        val = lstCopy[0]
+        lstTrouver = []
+        while contient(lstCopy, val):
+            idVal = nthIndexOf(lst, len(lstTrouver)+1, val)
+            lstTrouver.append(idVal)
+            del lstCopy[firstIndexOf(lstCopy, val)]
+        print(f'Position(s) du {val} : {lstTrouver}')
+    return None
+
+enumerer([5, 2, 4, 2, 7, 5, 6, 2, 7, 4, 5, 7, 9])
