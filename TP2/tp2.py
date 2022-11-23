@@ -31,3 +31,11 @@ def getMin(lst: list) -> int:
         if elt < mini:
             mini = elt
     return mini
+
+def getIndexMin(lst: list) -> int:
+    idMini=0
+    for i in range(1, len(lst)):
+        if lst[i] < lst[idMini]:
+            idMini = i
+
+    return idMini
