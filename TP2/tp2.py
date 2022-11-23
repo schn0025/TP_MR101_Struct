@@ -45,3 +45,9 @@ def getIndexMinFrom(lst: list, depart: int) -> int:
         if lst[i] < lst[idMini]:
             idMini = i
     return idMini
+
+def triSelection(lst: list) -> None:
+    for i in range(len(lst)):
+        idMini=getIndexMinFrom(lst, i)
+        echanger(lst, i, idMini)
+    return None
