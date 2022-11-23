@@ -95,5 +95,3 @@ def enumerer(lst: list) -> None:
             del lstCopy[firstIndexOf(lstCopy, val)]
         print(f'Position(s) du {val} : {lstTrouver}')
     return None
-
-enumerer([5, 2, 4, 2, 7, 5, 6, 2, 7, 4, 5, 7, 9])
