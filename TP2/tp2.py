@@ -24,3 +24,10 @@ def triBulles(lst: list) -> None:
                 modif += 1
         etape += 1
     return None
+
+def getMin(lst: list) -> int:
+    mini=lst[0]
+    for elt in lst:
+        if elt < mini:
+            mini = elt
+    return mini
