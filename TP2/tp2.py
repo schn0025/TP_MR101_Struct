@@ -37,5 +37,11 @@ def getIndexMin(lst: list) -> int:
     for i in range(1, len(lst)):
         if lst[i] < lst[idMini]:
             idMini = i
+    return idMini
 
+def getIndexMinFrom(lst: list, depart: int) -> int:
+    idMini = depart
+    for i in range(depart, len(lst)):
+        if lst[i] < lst[idMini]:
+            idMini = i
     return idMini
