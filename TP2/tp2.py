@@ -51,3 +51,10 @@ def triSelection(lst: list) -> None:
         idMini=getIndexMinFrom(lst, i)
         echanger(lst, i, idMini)
     return None
+
+def deplacerCase(lst: list, i: int) ->None:
+    while i > 0 and lst[i] < lst[i-1]:
+        echanger(lst, i, i-1)
+        i -= 1
+    return None
+
