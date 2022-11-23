@@ -58,3 +58,7 @@ def deplacerCase(lst: list, i: int) ->None:
         i -= 1
     return None
 
+def triInsertion(lst: list) -> None:
+    for i in range(len(lst)):
+        deplacerCase(lst, i)
+    return None
