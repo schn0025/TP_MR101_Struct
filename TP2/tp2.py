@@ -62,3 +62,20 @@ def triInsertion(lst: list) -> None:
     for i in range(len(lst)):
         deplacerCase(lst, i)
     return None
+
+def triSelectionRect(lst: list, tps: float) -> None:
+    for i in range(len(lst)):
+        idMini = i
+        for y in range(i, len(lst)):
+            if lst[y].getHeight() < lst[idMini].getHeight():
+                idMini = y
+        tmp = lst[i]
+        tmp.unsetX(tps)
+        lst[i] = lst[idMini]
+        lst[i].setX(i, tps)
+        lst[idMini] = tmp
+        lst[idMini].setX(idMini, tps)
+        lst[i].setPlaced()
+
+    return None
+
