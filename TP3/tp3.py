@@ -43,3 +43,6 @@ def getReponse(val :int) -> str:
     return rep.upper()
 
 # creation du choix de l'ordi
+
+def devinerNombre(mn: int, mx: int) -> int:
+    nb = int(input(f'Choisissez un nombre entre {mn} {mx} '))
