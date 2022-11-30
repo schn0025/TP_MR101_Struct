@@ -34,3 +34,5 @@ def binarySearch(lst: list, val: float) -> int:
             id = imilieu
         imilieu = (ideb + ifin) // 2
     return id
+
+# programation du jeu "deviner un nombre"
