@@ -93,7 +93,6 @@ def triSelectionRect(lst: list, tps: float) -> None:
 def triBullesRect(lst: list, tps: float) -> None:
     etape = 1
     modif = -1
-    nbPlace=0
     derModif = len(lst) - 1
     while modif != 0:
         modif = 0
