@@ -79,3 +79,29 @@ def triSelectionRect(lst: list, tps: float) -> None:
 
     return None
 
+def triBullesRect(lst: list, tps: float) -> None:
+    etape = 1
+    modif = -1
+    nbPlace=0
+    derModif = len(lst) - 1
+    while modif != 0:
+        modif = 0
+        d = 0
+        for i in range(0, derModif):
+            if lst[i].getHeight() > lst[i + 1].getHeight():
+                tmp = lst[i]
+                tmp.unsetX(tps)
+                lst[i] = lst[i+1]
+                lst[i].setX(i, tps)
+                lst[i+1] = tmp
+                lst[i+1].setX(i+1, tps)
+                modif += 1
+                d = i + 1
+        avDerModif = derModif
+        derModif = d
+        lst[d].setPlaced()
+        while avDerModif > derModif :
+            lst[avDerModif].setPlaced()
+            avDerModif-=1
+
+        etape += 1
