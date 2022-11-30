@@ -1,5 +1,5 @@
 from TP1.tp1 import getRandomList
-from TP2.tp2 import triBullesRect
+from TP2.tp2 import triBullesRect, tirInsertionRect
 from view.Canvas import *
 from view.Rect import *
 
@@ -14,6 +14,6 @@ for i in range(len(lst)):
     lstRec.append(r)
 print('Lancement du tri : cliquez dans la fenêtre')
 waitClick()
-triBullesRect(lstRec, tps)
+tirInsertionRect(lstRec, tps)
 print("Fin du tri : cliquez pour finir")
 waitClick()
