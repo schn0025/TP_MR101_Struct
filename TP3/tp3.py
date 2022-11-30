@@ -36,3 +36,10 @@ def binarySearch(lst: list, val: float) -> int:
     return id
 
 # programation du jeu "deviner un nombre"
+# création de la fonction de sesie d'un nombre
+def getReponse(val :int) -> str:
+    print("Proposition de l’ordinateur :", val)
+    rep = input("Votre nombre est-il (E)gal, plus (G)rand ou plus (P)etit ?")
+    return rep.upper()
+
+# creation du choix de l'ordi

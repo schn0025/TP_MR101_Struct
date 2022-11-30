@@ -1,5 +1,5 @@
 # main_tp3.py
-from TP3.tp3 import indexOf
+from TP3.tp3 import indexOf, getReponse
 from TP3.tp3 import indexOfSorted
 
 def test_indexOf() -> None :
@@ -16,3 +16,5 @@ def test_indexOfSorted() -> None :
     print(f"Recherche de 3 dans {lst} : index, nombre itérations = {indexOfSorted(lst, 3)}")
     return None
 test_indexOfSorted()
+val=50
+getReponse(val)
