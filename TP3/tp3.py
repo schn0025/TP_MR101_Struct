@@ -81,7 +81,7 @@ def demanderReponse() -> int:
 
 def verifierIntervalle(mn, mx, n) -> bool:
     ilEst = False
-    if n < mx and n > mn:
+    if n <= mx and n >= mn:
         ilEst = True
     else:
         print(f"Le nombre {n} choisi n’est pas compris dans l’intervalle [{mn}, {mx}] ")
