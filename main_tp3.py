@@ -9,7 +9,7 @@ def test_indexOf() -> None :
     return None
 # test_indexOf()
 
-def test_indexOfSorted() -> None :
+def test_indexOfSorted() -> None:
     lst = [4, 2, 8, 5, 6, 5, 4, 1]
     lst.sort()
     print(f"Recherche de 5 dans {lst} : index, nombre itérations = {indexOfSorted(lst, 5)}")
@@ -17,8 +17,7 @@ def test_indexOfSorted() -> None :
     return None
 # test_indexOfSorted()
 
-def test_devinerNombre()-> None:
-    val= 520
-    devinerNombre(0,1000)
+def test_devinerNombre() -> None:
+    devinerNombre(0, 1000, [])
     return None
 test_devinerNombre()
