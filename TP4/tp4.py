@@ -39,3 +39,7 @@ def getMax(tab: list) -> float:
             maxi = maxiTemp
     return maxi
 
+def getSize2D(tab: list) -> tuple:
+    nbLingne=len(tab)
+    nbCol=len(tab[0])
+    return (nbLingne, nbCol)
