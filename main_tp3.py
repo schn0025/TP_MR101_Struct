@@ -1,5 +1,5 @@
 # main_tp3.py
-from TP3.tp3 import indexOf, getReponse
+from TP3.tp3 import indexOf, getReponse, devinerNombre
 from TP3.tp3 import indexOfSorted
 
 def test_indexOf() -> None :
@@ -7,7 +7,7 @@ def test_indexOf() -> None :
     print(f"Recherche de 5 dans {lst} : index = {indexOf(lst, 5)}")
     print(f"Recherche de 9 dans {lst} : index = {indexOf(lst, 9)}")
     return None
-test_indexOf()
+# test_indexOf()
 
 def test_indexOfSorted() -> None :
     lst = [4, 2, 8, 5, 6, 5, 4, 1]
@@ -15,6 +15,10 @@ def test_indexOfSorted() -> None :
     print(f"Recherche de 5 dans {lst} : index, nombre itérations = {indexOfSorted(lst, 5)}")
     print(f"Recherche de 3 dans {lst} : index, nombre itérations = {indexOfSorted(lst, 3)}")
     return None
-test_indexOfSorted()
-val=50
-getReponse(val)
+# test_indexOfSorted()
+
+def test_devinerNombre()-> None:
+    val= 520
+    devinerNombre(0,1000)
+    return None
+test_devinerNombre()

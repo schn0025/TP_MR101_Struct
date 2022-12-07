@@ -45,4 +45,27 @@ def getReponse(val :int) -> str:
 # creation du choix de l'ordi
 
 def devinerNombre(mn: int, mx: int) -> int:
-    nb = int(input(f'Choisissez un nombre entre {mn} {mx} '))
+    nb = mn - 1
+    idDeb = mn
+    idFin = mx
+    while nb < mn or nb > mx:
+        nb = int(input(f'Choisissez un nombre entre {mn} {mx} '))
+    lstRep = ['P','E','G']
+    c = (idDeb+idFin)//2
+    n=1
+    rep = 'pas de rep'
+    while rep != 'E' and idDeb <= idFin:
+        rep = 'pas de rep'
+        while rep not in lstRep:
+            rep = (getReponse(c)).upper()
+        if rep == 'P':
+            idFin = c - 1
+        elif rep == 'G':
+            idDeb = c + 1
+        else:
+            print('trouvé en', n,'essais')
+        c = (idDeb + idFin) // 2
+        n += 1
+    if idDeb > idFin:
+        print("je n'est pas trouvé")
+
