@@ -83,3 +83,10 @@ def getSommeDiagonale1(matrice: list) -> int:
         somme += matrice[i][i]
     return somme
 
+def getSommeDiagonale2(matrice: list) -> int:
+    somme = 0
+    longMat = len(matrice[0])-1
+    for i in range(longMat+1):
+        somme += matrice[i][longMat - i]
+    return somme
+

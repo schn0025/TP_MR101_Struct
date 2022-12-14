@@ -2,7 +2,7 @@
 from random import randint
 
 from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D, getCarre2D, getSommeLignes, \
-    getSommeColonnes, getSommeDiagonale1
+    getSommeColonnes, getSommeDiagonale1, getSommeDiagonale2
 
 
 def test_getRegularArray2D() -> None:
@@ -54,11 +54,18 @@ def test_getSommeDiagonale1():
         matrice = getCarre2D(3)
         somme = getSommeDiagonale1(matrice)
         print(f'{matrice} , somme de la diagonale principale : {somme}')
+
+def test_getSommeDiagonale2():
+    for i in range(5):
+        matrice = getCarre2D(3)
+        somme = getSommeDiagonale2(matrice)
+        print(f'{matrice} , somme de la diagonale principale : {somme}')
 # test_getRegularArray2D()
 # test_getMinMax()
 # test_getRegularArray2D()
 # test_getCarre2D()
 # test_getSommeLignes()
 #test_getSommeColonnes()
+#test_getSommeDiagonale1()
 test_getSommeDiagonale1()
 
