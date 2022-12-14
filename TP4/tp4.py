@@ -49,7 +49,7 @@ def getSize2D(tab: list) -> tuple:
 def getCarre2D(n: int) -> list:
     matrice = []
     val = []
-    for i in range(1,n ** 2+1):
+    for i in range(1, n ** 2+1):
         val.append(i)
     shuffle(val)
     for i in range(n):
@@ -58,4 +58,22 @@ def getCarre2D(n: int) -> list:
             ligne.append(val.pop())
         matrice.append(ligne)
     return matrice
+
+def getSommeLignes(matrice: list) -> list:
+    somme = []
+    for elt in matrice:
+        compt = 0
+        for i in range(len(elt)):
+            compt += elt[i]
+        somme.append(compt)
+    return somme
+
+def getSommeColonnes(matrice: list) -> list:
+    somme =[]
+    for i in range(len(matrice[0])):
+        compt = 0
+        for elt in matrice:
+            compt += elt[i]
+        somme.append(compt)
+    return somme
 

@@ -1,7 +1,8 @@
 # main_tp4.py
 from random import randint
 
-from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D, getCarre2D
+from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D, getCarre2D, getSommeLignes, \
+    getSommeColonnes
 
 
 def test_getRegularArray2D() -> None:
@@ -35,7 +36,22 @@ def test_getCarre2D():
     for i in range(5):
         n=randint(3,6)
         print(getCarre2D(n))
+
+def test_getSommeLignes():
+    for i in range(5):
+        matrice = getCarre2D(3)
+        somme = getSommeLignes(matrice)
+        print(f'{matrice} , somme des lignes : {somme}')
+
+def test_getSommeColonnes():
+    for i in range(5):
+        matrice = getCarre2D(3)
+        somme = getSommeColonnes(matrice)
+        print(f'{matrice} , somme des colonnes : {somme}')
 # test_getRegularArray2D()
 # test_getMinMax()
 # test_getRegularArray2D()
-test_getCarre2D()
+# test_getCarre2D()
+# test_getSommeLignes()
+test_getSommeColonnes()
+
