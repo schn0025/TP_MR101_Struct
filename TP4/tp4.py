@@ -77,3 +77,9 @@ def getSommeColonnes(matrice: list) -> list:
         somme.append(compt)
     return somme
 
+def getSommeDiagonale1(matrice: list) -> int:
+    somme = 0
+    for i in range(len(matrice[0])):
+        somme += matrice[i][i]
+    return somme
+
