@@ -1,7 +1,7 @@
 # main_tp4.py
 from random import randint
 
-from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D
+from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D, getCarre2D
 
 
 def test_getRegularArray2D() -> None:
@@ -30,6 +30,12 @@ def test_getRegularArray2D():
         assert getMin(tab) >= mn, "min a planter"
         assert getMax(tab) <= mx, "max a planter"
     print("La fonction getRegularArray2D est correcte !")
+
+def test_getCarre2D():
+    for i in range(5):
+        n=randint(3,6)
+        print(getCarre2D(n))
 # test_getRegularArray2D()
 # test_getMinMax()
 # test_getRegularArray2D()
+test_getCarre2D()

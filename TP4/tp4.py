@@ -41,7 +41,21 @@ def getMax(tab: list) -> float:
 
 
 def getSize2D(tab: list) -> tuple:
-    nbLingne = len(tab)
+    nbLigne = len(tab)
     nbCol = len(tab[0])
-    return (nbLingne, nbCol)
+    return nbLigne, nbCol
+
+
+def getCarre2D(n: int) -> list:
+    matrice = []
+    val = []
+    for i in range(1,n ** 2+1):
+        val.append(i)
+    shuffle(val)
+    for i in range(n):
+        ligne= []
+        for y in range(n):
+            ligne.append(val.pop())
+        matrice.append(ligne)
+    return matrice
 
