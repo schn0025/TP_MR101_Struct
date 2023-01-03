@@ -140,3 +140,19 @@ def dessinerCarre(matrice: list) -> view.Canvas:
     col2.draw(cv)
     waitClick()
     return cv
+
+def zeros(n1: int, n2: int) -> list:
+    tab = []
+    for i in range(n1):
+        ligne = [0] * n2
+        tab.append(ligne)
+
+
+def getArray2D(lst: list) -> list:
+    tab = []
+    for elt in lst:
+        ligne = []
+        for i in range(elt):
+            ligne.append(0)
+        tab.append(ligne)
+    return tab
