@@ -2,7 +2,7 @@
 from random import randint
 
 from TP4.tp4 import getRegularArray2D, getMin, getMax, isRegular, getSize2D, getCarre2D, getSommeLignes, \
-    getSommeColonnes, getSommeDiagonale1, getSommeDiagonale2, dessinerCarre, getArray2D, zeros
+    getSommeColonnes, getSommeDiagonale1, getSommeDiagonale2, dessinerCarre, getArray2D, zeros, creerCarreMagique
 
 
 def test_getRegularArray2D1() -> None:
@@ -70,8 +70,16 @@ def test_dessinerCarre():
     mat = getCarre2D(10)
     dessinerCarre(mat)
 
-def text_zeros():
-    zeros()
+def test_zeros():
+    m = zeros(4, 7)
+    print(m)
+    m[0][2] = 10
+    print(m)
+
+def test_creerCarreMagique():
+    tab = creerCarreMagique(9)
+    for elt in tab:
+        print(elt)
 # test_getRegularArray2D1()
 # test_getMinMax()
 # test_getRegularArray2D2()
@@ -81,3 +89,5 @@ def text_zeros():
 # test_getSommeDiagonale1()
 # test_getSommeDiagonale1()
 # test_dessinerCarre()
+#test_zeros()
+test_creerCarreMagique()

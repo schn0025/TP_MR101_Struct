@@ -156,3 +156,37 @@ def getArray2D(lst: list) -> list:
             ligne.append(0)
         tab.append(ligne)
     return tab
+
+def zeros(nl: int, nc: int) -> list:
+    tab = []
+    for i in range(nl):
+        tab.append([0]*nc)
+    return tab
+
+def creerCarreMagique(n: int) -> list:
+    rep=None
+    if n % 2 != 0:
+        tab=zeros(n,n)
+        case=n*n
+        x= 0
+        y= n //2
+        for i in range(1,case+1):
+            tab[x][y] = i
+            xTemp = x
+            yTemp = y
+            xTemp -= 1
+            yTemp += 1
+            if xTemp < 0:
+                xTemp = n-1
+            if yTemp >= n:
+                yTemp = 0
+            if tab[xTemp][yTemp] == 0:
+                x = xTemp
+                y = yTemp
+            else:
+                x += 1
+                if x >= n:
+                    x=0
+        rep=tab
+
+    return rep
