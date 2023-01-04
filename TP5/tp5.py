@@ -22,3 +22,11 @@ def afficherPanier(p: dict) -> None:
         print(f'{key:<20}:{str(p[key]):>14}')
     print('-----------------------------------')
     print(f'{"Prix Total":>18}  : {str(total):>13}')
+
+def supprimerArticle(p: dict, a: str) -> bool:
+    rep = False
+    a = a.capitalize()
+    if a in p:
+        p.pop(a)
+        rep = True
+    return rep
