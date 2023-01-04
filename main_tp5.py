@@ -10,4 +10,5 @@ for i in range(len(prix)):
 # print(getPrix(panier, "Clémentines")) # Devrait afficher 5.27
 # print(getPrix(panier, "Cerises")) # Devrait afficher 0.0
 
-print(getPrixTotal(panier)) # Devrait afficher 34.57
+#print(getPrixTotal(panier)) # Devrait afficher 34.57
+afficherPanier(panier)
